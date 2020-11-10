@@ -1,3 +1,9 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details%></p>
-<p><%= @task.completed%></p>
+<% if @task.completed  %>
+<p> Task Completed 👍</p>
+<% else %>
+<p> Not completed 🐌</p>
+<% end %>
+
+<%= link_to "Modify Task", edit_path(@task.id)  %>

@@ -1,8 +1,11 @@
-<h2>Giovanni, this is your home page where you're gonna display your tasks</h2>
+<h2>Giovanni, this is your home page </h2>
 
 
 <ul>
   <% @tasks.each do |task| %>
-  <li><%= task.name %></li>
+  <li><%=link_to task.title, task_path(task.id) %></li>
   <%end%>
-<ul>
+</ul>
+<br>
+<%= link_to "Add another task", tasks_new_path  %>
+<br>
