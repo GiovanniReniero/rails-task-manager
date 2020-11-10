@@ -1,0 +1,8 @@
+<h2>Giovanni, this is your home page where you're gonna display your tasks</h2>
+
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li><%= task.name %></li>
+  <%end%>
+<ul>
