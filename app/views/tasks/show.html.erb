@@ -1,9 +1,12 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details%></p>
 <% if @task.completed  %>
-<p> Task Completed 👍</p>
+<p> Task completed 👍</p>
 <% else %>
 <p> Not completed 🐌</p>
 <% end %>
 
 <%= link_to "Modify Task", edit_path(@task.id)  %>
+<br>
+<br>
+ <%= link_to "Delete Task", task_path(@task.id), method: :delete %> 
